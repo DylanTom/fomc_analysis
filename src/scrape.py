@@ -3,6 +3,15 @@ from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 
 def scrape_speeches(person, start_date):
+    """
+    Outputs scraped speeches from Federal Reserve website
+
+    Inputs:
+    person - str, name of Federal Reserve official
+    start_date - datetime, date procedure begins from
+
+    Default: Scrapes all of Jerome Powell's speeches since he was named Chairman
+    """
     base_url = 'https://www.federalreserve.gov/newsevents/speech/{}{}a.htm'
 
     # Start and end dates for scraping
